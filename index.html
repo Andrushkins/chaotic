@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+  <div class="main_text">
+    <p>Русская литература</p>
+  </div>
+  <div id="page" style="display: block;">
+    <div class="blocks" id="blocks">
+      <div class="books" id="book1">
+        <div class="book">
+          <div class="inner">
+            <img src="http://animedia-company.cz/wp-content/uploads/2013/03/cover1-1024-350x466.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="books" id="book2">
+        <div class="book">
+          <div class="inner">
+            <img src="http://www.e-reading.club/cover/20/20412.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="books" id="book3">
+        <div class="book">
+          <div class="inner">
+            <img src="http://apk-knigi.ru/uploads/posts/2014-11/1414992588_master-i-margarita.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="books" id="book4">
+        <div class="book">
+          <div class="inner">
+            <img src="http://modernlib.ru/books/bulgakov_mihail_afanasevich/sobache_serdce/cover.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="books" id="book5">
+        <div class="book">
+          <div class="inner">
+            <img src="http://lozero.ru/image/0/63/6310.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="books" id="book6">
+        <div class="book">
+          <div class="inner">
+            <img src="http://knigatop.com/img_post/88172689153.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script defer>
+
+    var blocks = document.getElementsByClassName('books');
+
+    var book1 = document.getElementById('book1');
+    var book2 = document.getElementById('book2');
+    var book3 = document.getElementById('book3');
+    var book4 = document.getElementById('book4');
+    var book5 = document.getElementById('book5');
+    var book6 = document.getElementById('book6');
+
+    document.addEventListener("mousemove", function( event ) {
+      var x = event.clientX;
+      var y = event.clientY;
+      var moveXfast = x/15;
+      var moveX = x/25;
+      var moveY = y/25;
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+
+      // console.log(x);
+      // console.log(y);
+
+      book1.style.left = -moveX + 'px';
+      book1.style.top  = -moveY + 'px';
+      book2.style.left = -moveXfast + 'px';
+      book2.style.top  = -moveY + 'px';
+      book3.style.left = -moveX + 'px';
+      book3.style.top  = -moveY + 'px';
+      book4.style.left = -moveXfast + 'px';
+      book4.style.top  = -moveY + 'px';
+      book5.style.left = -moveXfast + 'px';
+      book5.style.top  = -moveY + 'px';
+      book6.style.left = -moveX + 'px';
+      book6.style.top  = -moveY + 'px';
+
+      for (var i = 0; i < blocks.length ; i++) {
+        blocks[i].style.position = 'relative';
+      }
+      // book1.setAttribute("style", "margin-left:" moveX + "px", "margin-top:" moveY + "px");
+
+    }, false)
+
+  </script>
+
+
+</body>
+</html>
